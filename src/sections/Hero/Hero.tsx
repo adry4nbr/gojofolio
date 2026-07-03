@@ -5,15 +5,12 @@ import { SixEyesIcon } from "./SixEyesIcon";
 
 export function Hero() {
   return (
-    <section
-      id="Hero"
-      className="flex flex-col justify-center items-center bg-background text-foreground"
-    >
+    <section id="Hero" className="flex flex-col justify-center items-center">
       <ThemeToggle />
       <SixEyesIcon />
       <h1>Portfolio</h1>
       <p>Desenvolvedor...</p>
-      <div>
+      <div className="flex gap-4">
         <Button variant="filled"> Projetos </Button>
         <Button variant="outline"> Contatos </Button>
       </div>
