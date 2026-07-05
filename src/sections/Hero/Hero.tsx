@@ -11,7 +11,7 @@ export function Hero() {
       <SixEyesIcon />
       <h1 className="text-9xl my-2">Portfolio</h1>
       <h2 className="text-4xl mb-7">Desenvolvedor...</h2>
-      <div className="flex gap-5 ">
+      <div className="flex gap-5 mb-24">
         <Button variant="filled"> Ver Projetos </Button>
         <Button variant="outline"> Contato </Button>
       </div>
