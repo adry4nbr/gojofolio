@@ -6,8 +6,12 @@ export function Hero() {
   return (
     <section
       id="Hero"
-      className="flex flex-col justify-center items-center h-screen gap-1"
+      className="relative flex flex-col justify-center items-center h-screen gap-1"
     >
+      <div
+        className="absolute w-80 h-80 pointer-events-none"
+        style={{ background: "var(--hero-glow)", filter: "blur(120px)" }}
+      />
       <SixEyesIcon />
       <h1 className="text-9xl my-2">Portfolio</h1>
       <h2 className="text-4xl mb-7">Desenvolvedor...</h2>

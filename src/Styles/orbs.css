@@ -29,15 +29,26 @@
   --orb-purple-glow: #9333ea;
 
   --explosion-purple-1: #e2caf9;
-  --explosion-purple-2: #c384fe;
-  --explosion-purple-3: #b269f7;
-  --explosion-purple-4: #9333ea;
+  --explosion-purple-2: #9b56dc;
+  --explosion-purple-3: #a248f6;
+  --explosion-purple-4: #8110ea;
 
   --explosion-purple-radiant: radial-gradient(
     circle at 50% 50%,
-    var(--explosion-purple-1) 10%,
-    var(--explosion-purple-2) 30%,
+    var(--explosion-purple-1) 5%,
+    var(--explosion-purple-2) 20%,
+    var(--explosion-purple-3) 25%,
+    var(--explosion-purple-4) 30%,
+    var(--explosion-purple-1) 35%,
+    var(--explosion-purple-2) 40%,
+    var(--explosion-purple-3) 45%,
+    var(--explosion-purple-4) 50%,
+    var(--explosion-purple-4) 55%,
     var(--explosion-purple-3) 60%,
+    var(--explosion-purple-2) 65%,
+    var(--explosion-purple-1) 70%,
+    var(--explosion-purple-2) 80%,
+    var(--explosion-purple-3) 90%,
     var(--explosion-purple-4) 100%
   );
 }

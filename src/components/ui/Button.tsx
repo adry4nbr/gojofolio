@@ -9,9 +9,9 @@ const baseClasses =
 
 const variantClasses = {
   filled:
-    "bg-primary border-border text-background hover:shadow-[0_8px_20px_-4px_var(--color-accent)]",
+    "bg-primary border-border text-background hover:shadow-[0_8px_20px_-4px_var(--color-accent-blue)]",
   outline:
-    "border border-border text-foreground bg-transparent hover:shadow-[0_8px_20px_-4px_var(--color-ring)]",
+    "border border-border text-foreground bg-transparent hover:shadow-[0_8px_20px_-4px_var(--color-accent-red)]",
 };
 
 export function Button({
