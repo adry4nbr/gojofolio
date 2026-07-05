@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       id="Hero"
-      className="flex flex-col justify-center items-center h-screen"
+      className="flex flex-col justify-center items-center h-screen gap-1"
     >
       <SixEyesIcon />
       <h1 className="text-9xl my-2">Portfolio</h1>

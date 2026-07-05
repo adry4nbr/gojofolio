@@ -4,7 +4,7 @@ export function ScrollIndicator() {
   return (
     <motion.div
       aria-hidden="true"
-      className="flex items-start border-border border-2 rounded-full px-3 py-6 mt-5"
+      className="flex items-start border-border border-2 rounded-full px-3 py-6 "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, y: [0, 16, 0] }}
       transition={{

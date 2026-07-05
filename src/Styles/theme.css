@@ -3,9 +3,12 @@
     --red-500: #ef4444;
     --red-700: #b91c1c;
     --blue-500: #3b82f6;
+    --blue-600: #2563eb;
     --blue-700: #1d4ed8;
+    --cyan-500: #06b6d4;
     --purple-600: #9333ea;
     --purple-900: #2e1065;
+    --pink-500: #ec4899;
   }
 
   [data-theme="light"] {
@@ -18,6 +21,11 @@
     --muted: #e8e8ec;
     --border: rgba(0, 0, 0, 0.949);
     --ring: var(--blue-500);
+    --six-eyes-gradient: linear-gradient(
+      90deg,
+      var(--blue-600),
+      var(--cyan-500)
+    );
   }
 
   [data-theme="dark"] {
@@ -30,6 +38,11 @@
     --muted: #1e1e1e;
     --border: rgba(255, 255, 255, 0.74);
     --ring: var(--purple-600);
+    --six-eyes-gradient: linear-gradient(
+      90deg,
+      var(--purple-600),
+      var(--pink-500)
+    );
   }
 }
 

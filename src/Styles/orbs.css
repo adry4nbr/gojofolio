@@ -27,6 +27,19 @@
   --orb-red-glow: #ef4444;
   --orb-blue-glow: #3b82f6;
   --orb-purple-glow: #9333ea;
+
+  --explosion-purple-1: #e2caf9;
+  --explosion-purple-2: #c384fe;
+  --explosion-purple-3: #b269f7;
+  --explosion-purple-4: #9333ea;
+
+  --explosion-purple-radiant: radial-gradient(
+    circle at 50% 50%,
+    var(--explosion-purple-1) 10%,
+    var(--explosion-purple-2) 30%,
+    var(--explosion-purple-3) 60%,
+    var(--explosion-purple-4) 100%
+  );
 }
 
 @theme {

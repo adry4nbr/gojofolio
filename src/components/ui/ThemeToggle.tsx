@@ -7,7 +7,7 @@ export function ThemeToggle() {
 
   return (
     <button
-      className="fixed top-0 right-0 m-8 p-4 border-border border-2 rounded-full cursor-pointer hover:scale-110 transition-all duration-300"
+      className="fixed top-0 right-0 m-10 p-4 border-border border-2 rounded-full cursor-pointer hover:scale-110 transition-all duration-300"
       onClick={toggleTheme}
       aria-label={
         theme === "light" ? "Mudar para tema escuro" : "Mudar para tema claro"
