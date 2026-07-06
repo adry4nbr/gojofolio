@@ -13,6 +13,7 @@ export function SixEyesIcon() {
 
   return (
     <div className="relative flex items-center justify-center ">
+      {/* Efeito de Explosão */}
       {hasAwakened && (
         <motion.div
           className="absolute rounded-full pointer-events-none top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2 z-50"
@@ -23,6 +24,7 @@ export function SixEyesIcon() {
         />
       )}
 
+      {/* Olho do Hero */}
       <motion.button
         onClick={handleClick}
         disabled={hasAwakened}

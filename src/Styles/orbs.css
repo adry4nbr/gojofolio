@@ -28,6 +28,55 @@
   --orb-blue-glow: #3b82f6;
   --orb-purple-glow: #9333ea;
 
+  /* Orbs das animações de travessia */
+
+  /* RGB "soltos" pra permitir opacidade dinâmica no rgba() */
+  --orb-red-glow-rgb: 239, 68, 68;
+  --orb-blue-glow-rgb: 59, 130, 246;
+
+  /* Núcleo da bola (gradiente com highlight deslocado) */
+  --orb-red-core: radial-gradient(
+    circle at 35% 35%,
+    #fff 0%,
+    #fca5a5 12%,
+    #ef4444 38%,
+    #b91c1c 68%,
+    #450a0a 100%
+  );
+  --orb-blue-core: radial-gradient(
+    circle at 35% 35%,
+    #fff 0%,
+    #bfdbfe 12%,
+    #3b82f6 38%,
+    #1d4ed8 68%,
+    #1e3a8a 100%
+  );
+
+  /* Aura atmosférica larga */
+  --orb-red-aura: radial-gradient(
+    circle,
+    rgba(var(--orb-red-glow-rgb), 0.28) 0%,
+    rgba(var(--orb-red-glow-rgb), 0.09) 35%,
+    transparent 65%
+  );
+  --orb-blue-aura: radial-gradient(
+    circle,
+    rgba(var(--orb-blue-glow-rgb), 0.28) 0%,
+    rgba(var(--orb-blue-glow-rgb), 0.09) 35%,
+    transparent 65%
+  );
+
+  /* box-shadow composto do núcleo */
+  --orb-red-shadow:
+    0 0 8px #fff, 0 0 20px var(--orb-red-glow), 0 0 45px var(--orb-red-glow),
+    0 0 90px rgba(var(--orb-red-glow-rgb), 0.55),
+    0 0 180px rgba(var(--orb-red-glow-rgb), 0.18);
+  --orb-blue-shadow:
+    0 0 8px #fff, 0 0 20px var(--orb-blue-glow), 0 0 45px var(--orb-blue-glow),
+    0 0 90px rgba(var(--orb-blue-glow-rgb), 0.55),
+    0 0 180px rgba(var(--orb-blue-glow-rgb), 0.18);
+
+  /* Explosão Roxa */
   --explosion-purple-1: #e2caf9;
   --explosion-purple-2: #9b56dc;
   --explosion-purple-3: #a248f6;

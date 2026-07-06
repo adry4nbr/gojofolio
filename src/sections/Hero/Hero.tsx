@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       id="Hero"
-      className="relative flex flex-col justify-center items-center h-screen gap-1"
+      className="relative flex flex-col justify-center items-center h-screen gap-1 overflow-hidden"
     >
       <div
         className="absolute w-80 h-80 pointer-events-none"
