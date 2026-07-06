@@ -13,8 +13,10 @@ export function Hero() {
         style={{ background: "var(--hero-glow)", filter: "blur(120px)" }}
       />
       <SixEyesIcon />
-      <h1 className="text-9xl my-2">Portfolio</h1>
-      <h2 className="text-4xl mb-7">Desenvolvedor...</h2>
+      <h1 className="text-9xl my-6 z-1">Portfolio</h1>
+      <p className="text-4xl mb-8 z-1 font-light">
+        Adryan | Desenvolvedor Front-End | O Mais Honrado
+      </p>
       <div className="flex gap-5 mb-24">
         <Button variant="filled"> Ver Projetos </Button>
         <Button variant="outline"> Contato </Button>

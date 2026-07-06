@@ -1,1 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "@fontsource/dela-gothic-one";
+@import "@fontsource/m-plus-rounded-1c/300.css";
+@import "@fontsource/m-plus-rounded-1c/400.css";
+@import "@fontsource/m-plus-rounded-1c/700.css";
+@import "@fontsource/jetbrains-mono";

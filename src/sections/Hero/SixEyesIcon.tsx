@@ -27,7 +27,7 @@ export function SixEyesIcon() {
         onClick={handleClick}
         disabled={hasAwakened}
         style={{ background: "var(--six-eyes-gradient)" }}
-        className="p-5 rounded-full mb-12"
+        className="p-5 rounded-full mb-8"
         aria-label={hasAwakened ? "Olho aberto" : "Olho fechado"}
         animate={{
           boxShadow: [
