@@ -12,7 +12,7 @@ interface EnergyBallProps {
 
 export function EnergyBall({
   color,
-  size = 80,
+  size = 100,
   xRange = ["-100%", "0%"],
   duration = 1.2,
   delay = 0,

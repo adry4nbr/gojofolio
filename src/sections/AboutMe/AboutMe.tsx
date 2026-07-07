@@ -1,12 +1,12 @@
-import { EnergyBall } from "../../components/ui/EnergyBall";
+import { EnergyBallReveal } from "./EnergyBallReveal";
 
 export function AboutMe() {
   return (
     <section
       id="ABoutMe"
-      className="relative flex flex-col justify-center items-center h-screen"
+      className="relative flex flex-col justify-center items-center h-screen overflow-hidden"
     >
-      <EnergyBall color="blue" />
+      <EnergyBallReveal />
       <p>AboutMe</p>
     </section>
   );
