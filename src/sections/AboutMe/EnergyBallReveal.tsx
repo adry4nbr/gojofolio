@@ -11,7 +11,7 @@ export function EnergyBallReveal() {
         initial={{ clipPath: "inset(0% 0% 0% 0%)" }}
         whileInView={{ clipPath: "inset(0% 0% 0% 100%)" }}
         viewport={{ once: true }}
-        transition={{ delay: 0.2, duration: 4, ease: "easeOut" }}
+        transition={{ delay: 0.2, duration: 2.5, ease: "easeOut" }}
       />
 
       {/* Bola — na frente, não afetada pelo clip-path do véu */}
@@ -19,8 +19,8 @@ export function EnergyBallReveal() {
         <EnergyBall
           color="red"
           xRange={["0vw", "100vw"]}
-          duration={4}
-          delay={0.4}
+          duration={3}
+          delay={0.2}
         />
       </div>
     </>
