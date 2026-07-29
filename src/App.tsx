@@ -1,6 +1,7 @@
 import { ThemeToggle } from "./components/ui/ThemeToggle";
-import { AboutMe } from "./sections/AboutMe/AboutMe";
 import { Hero } from "./sections/Hero/Hero";
+import { AboutMe } from "./sections/AboutMe/AboutMe";
+import { Projects } from "./sections/Projects/Projects";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <ThemeToggle />
       <Hero />
       <AboutMe />
+      <Projects />
     </div>
   );
 }
