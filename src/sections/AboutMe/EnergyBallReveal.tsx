@@ -7,7 +7,7 @@ export function EnergyBallReveal() {
     <>
       {/* Véu — fica atrás da bola, corta progressivamente */}
       <motion.div
-        className="absolute inset-0 z-10 bg-foreground"
+        className="absolute inset-0 z-15 bg-foreground pointer-events-none"
         initial={{ clipPath: "inset(0% 0% 0% 0%)" }}
         whileInView={{ clipPath: "inset(0% 0% 0% 100%)" }}
         viewport={{ once: true }}
@@ -15,7 +15,7 @@ export function EnergyBallReveal() {
       />
 
       {/* Bola — na frente, não afetada pelo clip-path do véu */}
-      <div className="absolute inset-0 z-20 flex items-center">
+      <div className="absolute inset-0 z-20 flex items-center pointer-events-none">
         <EnergyBall
           color="red"
           xRange={["0vw", "100vw"]}

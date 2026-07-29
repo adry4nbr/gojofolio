@@ -9,7 +9,7 @@ export function ProfilePhoto() {
         animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
         />
 
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-90 rounded-full border border-accent-red/30 shadow-[0_0_8px_1px] shadow-accent-red/20" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-90 rounded-full border border-accent-red/30 shadow-[0_0_4px_1px] shadow-accent-red/20" />
 
         <img
           src="../../../public/wallpapersden.com_satoru-gojo-manga-jujutsu-kaisen_2563x1355.jpg"

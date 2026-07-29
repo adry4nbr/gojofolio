@@ -5,7 +5,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const baseClasses =
-  "flex cursor-pointer items-center justify-center border-2 font-medium text-xl z-1 gap-2 px-10 py-5 rounded-3xl transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-60";
+  "flex cursor-pointer items-center justify-center border-2 font-medium text-xl z-10 gap-2 px-10 py-5 rounded-3xl transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-60 hover:scale-110 transition-all duration-400";
 
 const variantClasses = {
   filled:
