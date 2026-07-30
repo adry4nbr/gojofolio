@@ -1,5 +1,5 @@
 import { Button } from "../../components/ui/Button";
-import { StatCard } from "../../components/ui/StatCard";
+import { StatCard } from "./StatCard";
 
 const stats = [
   { value: "3+", label: "Anos de Experiência" },

@@ -13,6 +13,7 @@
     "@fontsource/dela-gothic-one": "^5.2.7",
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@fontsource/m-plus-rounded-1c": "^5.2.10",
+    "@icons-pack/react-simple-icons": "^13.13.0",
     "@tailwindcss/vite": "^4.3.2",
     "lucide-react": "^1.23.0",
     "motion": "^12.42.2",
