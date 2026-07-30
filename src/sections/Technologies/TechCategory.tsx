@@ -1,0 +1,53 @@
+/* eslint-disable react-refresh/only-export-components */
+// sections/Technologies/TechCategory.tsx
+import { motion } from "motion/react";
+import type { Variants } from "motion/react";
+import type { TechCategoryData } from "./technologies.data";
+import { TechCard } from "./TechCard";
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      delayChildren: 2.5, // após a colisão terminar — mesmo número do TRAVEL_DURATION + EXPLOSION_DURATION
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+interface TechCategoryProps {
+  category: TechCategoryData;
+}
+
+export const cardVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.6 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.4, ease: "backOut" },
+  },
+};
+
+export function TechCategory({ category }: TechCategoryProps) {
+  return (
+    <div>
+      <div className="flex items-center gap-4 mb-6">
+        <span className="text-sm tracking-widest text-accent-blue">
+          {category.title}
+        </span>
+        <div className="flex-1 h-px bg-border" />
+      </div>
+
+      <motion.div
+        className="grid grid-cols-3 gap-4"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {category.techs.map((tech) => (
+          <TechCard key={tech.name} tech={tech} />
+        ))}
+      </motion.div>
+    </div>
+  );
+}

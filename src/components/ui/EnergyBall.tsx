@@ -8,6 +8,8 @@ interface EnergyBallProps {
   xRange?: [string, string]; // [posição inicial, posição final]
   duration?: number; // duração da travessia (whileInView)
   delay?: number;
+  onAnimationComplete?: () => void;
+  onAnimationStart?: () => void;
 }
 
 export function EnergyBall({
@@ -16,6 +18,8 @@ export function EnergyBall({
   xRange = ["-100%", "0%"],
   duration = 1.2,
   delay = 0,
+  onAnimationComplete,
+  onAnimationStart,
 }: EnergyBallProps) {
   const core = `var(--orb-${color}-core)`;
   const aura = `var(--orb-${color}-aura)`;
@@ -28,6 +32,8 @@ export function EnergyBall({
       whileInView={{ x: xRange[1] }}
       viewport={{ once: true }}
       transition={{ duration, delay, ease: "easeOut" }}
+      onAnimationComplete={onAnimationComplete}
+      onAnimationStart={onAnimationStart}
       style={{ position: "relative", width: size, height: size, flexShrink: 0 }}
     >
       {/* Aura atmosférica larga */}

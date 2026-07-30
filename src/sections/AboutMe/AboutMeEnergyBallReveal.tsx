@@ -1,15 +1,18 @@
 import { motion } from "motion/react";
 import { EnergyBall } from "../../components/ui/EnergyBall";
+import { useState } from "react";
 
 export function AboutMeEnergyBallReveal() {
+  const [ballStarted, setBallStarted] = useState(false);
   return (
     <>
       {/* Véu — fica atrás da bola, corta progressivamente */}
       <motion.div
         className="absolute inset-0 z-15 bg-background pointer-events-none"
         initial={{ clipPath: "inset(0% 0% 0% 0%)" }}
-        whileInView={{ clipPath: "inset(0% 0% 0% 100%)" }}
-        viewport={{ once: true }}
+        animate={{
+          clipPath: ballStarted ? "inset(0% 0% 0% 100%)" : "inset(0% 0% 0% 0%)",
+        }}
         transition={{ delay: 0.1, duration: 3, ease: "easeOut" }}
       />
 
@@ -19,7 +22,8 @@ export function AboutMeEnergyBallReveal() {
           color="red"
           xRange={["0vw", "100vw"]}
           duration={3}
-          delay={0.18}
+          delay={0.3}
+          onAnimationStart={() => setBallStarted(true)}
         />
       </div>
     </>

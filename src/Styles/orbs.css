@@ -91,14 +91,7 @@
     var(--explosion-purple-1) 35%,
     var(--explosion-purple-2) 40%,
     var(--explosion-purple-3) 45%,
-    var(--explosion-purple-4) 50%,
-    var(--explosion-purple-4) 55%,
-    var(--explosion-purple-3) 60%,
-    var(--explosion-purple-2) 65%,
-    var(--explosion-purple-1) 70%,
-    var(--explosion-purple-2) 80%,
-    var(--explosion-purple-3) 90%,
-    var(--explosion-purple-4) 100%
+    var(--explosion-purple-4) 50%
   );
 
   --project-overlay-gradient: linear-gradient(
