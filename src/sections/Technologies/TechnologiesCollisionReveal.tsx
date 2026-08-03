@@ -18,7 +18,7 @@ export function TechnologiesCollisionReveal() {
     >
       {/* Véu branco — some só na fase "done" */}
       <motion.div
-        className="absolute inset-0 bg-white"
+        className="absolute inset-0 bg-background"
         initial={{ opacity: 1 }}
         animate={{ opacity: phase === "done" ? 0 : 1 }}
         transition={{ duration: 0.4, ease: "easeOut" }}

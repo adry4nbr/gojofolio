@@ -27,12 +27,14 @@ export interface Tech {
 
 export interface TechCategoryData {
   title: string;
+  accentColor: string;
   techs: Tech[];
 }
 
 export const techCategories: TechCategoryData[] = [
   {
     title: "FRONT-END",
+    accentColor: "--blue-500",
     techs: [
       { name: "React", icon: SiReact },
       { name: "TypeScript", icon: SiTypescript },
@@ -44,6 +46,7 @@ export const techCategories: TechCategoryData[] = [
   },
   {
     title: "BACK-END",
+    accentColor: "--red-500",
     techs: [
       { name: "Node.js", icon: SiNodedotjs },
       { name: "Express.js", icon: SiExpress },
@@ -52,6 +55,7 @@ export const techCategories: TechCategoryData[] = [
   },
   {
     title: "BANCO DE DADOS",
+    accentColor: "--purple-600",
     techs: [
       { name: "MongoDB", icon: SiMongodb },
       { name: "PostgreSQL", icon: SiPostgresql },
@@ -61,6 +65,7 @@ export const techCategories: TechCategoryData[] = [
   },
   {
     title: "FERRAMENTAS",
+    accentColor: "--pink-500",
     techs: [
       { name: "Git", icon: SiGit },
       { name: "Docker", icon: SiDocker },

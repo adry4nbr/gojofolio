@@ -5,20 +5,26 @@ import { cardVariants } from "./TechCategory";
 
 interface TechCardProps {
   tech: Tech;
+  accentColor: string;
 }
 
-export function TechCard({ tech }: TechCardProps) {
+export function TechCard({ tech, accentColor }: TechCardProps) {
   const Icon = tech.icon;
 
   return (
     <motion.div
       variants={cardVariants}
-      className="group relative flex flex-col items-center justify-center gap-2 p-4 rounded-xl border-2 border-border overflow-hidden transition-all duration-300 hover:scale-110 hover:border-accent-blue"
+      style={
+        {
+          "--tech-accent": `var(${accentColor})`,
+        } as React.CSSProperties
+      }
+      className="group relative flex flex-col items-center justify-center gap-2 py-4 bg-card rounded-xl border-2 border-(--tech-accent)/30 overflow-hidden transition-all duration-500 hover:scale-110 hover:border-(--tech-accent)/60"
     >
       <Icon size={32} color="default" />
       <span className="text-sm font-medium">{tech.name}</span>
 
-      <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-accent-blue w-0 group-hover:w-full transition-all duration-300" />
+      <div className="absolute bottom-0 left-1 right-1 h-0.5 bg-(--tech-accent) w-0 group-hover:w-full transition-all duration-500" />
     </motion.div>
   );
 }

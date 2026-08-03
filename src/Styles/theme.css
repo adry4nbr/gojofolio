@@ -14,7 +14,7 @@
   [data-theme="light"] {
     --background: #ffffff;
     --foreground: #0a0a0a;
-    --card: #f8f8f8;
+    --card: #ffffff;
     --primary: #0a0a0a;
     --accent-red: var(--red-500);
     --accent-blue: var(--blue-500);
@@ -42,7 +42,7 @@
   [data-theme="dark"] {
     --background: #0a0a0a;
     --foreground: #f5f5f5;
-    --card: #131313;
+    --card: #121212;
     --primary: #f5f5f5;
     --accent-red: var(--purple-600);
     --accent-blue: var(--purple-600);

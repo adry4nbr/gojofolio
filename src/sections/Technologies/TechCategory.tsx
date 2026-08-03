@@ -10,7 +10,7 @@ const containerVariants: Variants = {
   visible: {
     transition: {
       delayChildren: 2.5, // após a colisão terminar — mesmo número do TRAVEL_DURATION + EXPLOSION_DURATION
-      staggerChildren: 0.1,
+      staggerChildren: 0.4,
     },
   },
 };
@@ -24,28 +24,42 @@ export const cardVariants: Variants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.4, ease: "backOut" },
+    transition: { duration: 0.1, ease: "backOut" },
   },
 };
 
 export function TechCategory({ category }: TechCategoryProps) {
   return (
-    <div>
-      <div className="flex items-center gap-4 mb-6">
-        <span className="text-sm tracking-widest text-accent-blue">
+    <div className="m-6">
+      <div className="flex items-center gap-4 ">
+        <div
+          className="flex-1 h-px bg-border"
+          style={{ background: `var(${category.accentColor})` }}
+        />
+        <span
+          className="text-sm tracking-widest text-accent-blue"
+          style={{ color: `var(${category.accentColor})` }}
+        >
           {category.title}
         </span>
-        <div className="flex-1 h-px bg-border" />
+        <div
+          className="flex-1 h-px bg-border"
+          style={{ background: `var(${category.accentColor})` }}
+        />
       </div>
 
       <motion.div
-        className="grid grid-cols-3 gap-4"
+        className="grid grid-cols-3 gap-6 mt-4"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {category.techs.map((tech) => (
-          <TechCard key={tech.name} tech={tech} />
+          <TechCard
+            key={tech.name}
+            tech={tech}
+            accentColor={category.accentColor}
+          />
         ))}
       </motion.div>
     </div>
