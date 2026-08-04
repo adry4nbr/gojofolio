@@ -48,7 +48,7 @@ export function TechCategory({ category }: TechCategoryProps) {
       </div>
 
       <motion.div
-        className="grid grid-cols-3 gap-6 mt-4"
+        className="grid grid-cols-4 gap-6 mt-4"
         variants={containerVariants}
         initial="hidden"
         animate="visible"

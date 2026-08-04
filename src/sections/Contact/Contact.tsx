@@ -48,7 +48,7 @@ export function Contact() {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <Button variant="filled">Enviar E-mail</Button>
+          <Button variant="filled">Baixar Currículo</Button>
         </motion.div>
         <motion.div
           variants={itemVariants}
@@ -56,8 +56,8 @@ export function Contact() {
         />
       </motion.div>
       <footer className="flex bg-foreground text-background h-20 w-full mt-auto justify-center items-center">
-        © 2026 - Desenvolvido com ♥ inspirado em Satoru Gojo - Adryan Galdino
-        Soares
+        © 2026 - Desenvolvido por Adryan Galdino Soares - Tema inspirado em
+        Satoru Gojo da Obra Jujutsu Kaisen
       </footer>
     </section>
   );

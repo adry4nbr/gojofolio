@@ -2,10 +2,10 @@ import { Button } from "../../components/ui/Button";
 import { StatCard } from "./StatCard";
 
 const stats = [
-  { value: "3+", label: "Anos de Experiência" },
-  { value: "20+", label: "Projetos Concluídos" },
-  { value: "15+", label: "Tecnologias" },
-  { value: "10+", label: "Clientes Satisfeitos" },
+  { value: "1+", label: "Ano de Experiência Prática" },
+  { value: "5+", label: "Projetos Concluídos" },
+  { value: "26+", label: "Tecnologias" },
+  { value: "7+", label: "Cursos de Tecnologia" },
 ];
 
 export function AboutMeInfo() {
@@ -13,14 +13,16 @@ export function AboutMeInfo() {
     <div className="flex flex-col size-full justify-center px-16 gap-6">
       <div className="flex flex-col gap-4">
         <p className="text-xl font-medium text-foreground">
-          Sou um desenvolvedor web apaixonado por criar experiências digitais
-          que combinam design elegante com código limpo e eficiente. Acredito
-          que a tecnologia deve ser tanto funcional quanto bela.
+          Sou um desenvolvedor front-end em formação, apaixonado por criar
+          interfaces criativas e inclusivas que fazem diferença para pessoas
+          reais. Com essa mentalidade ganhei o Hackathon da Uninassau em
+          primeiro lugar.
         </p>
         <p className="text-xl font-medium text-foreground">
-          Com foco em desenvolvimento front-end e back-end, transformo ideias em
-          produtos digitais robustos — desde interfaces responsivas até APIs
-          escaláveis.
+          Com foco no ecossistema React/Next.js, construo desde componentes
+          responsivos até aplicações completas. Também possuo experiência
+          prática integrando APIs REST e gerenciando bancos de dados com
+          Supabase e Java.
         </p>
       </div>
       {/* Linha separadora */}
