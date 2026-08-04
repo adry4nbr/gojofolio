@@ -1,4 +1,3 @@
-// sections/Technologies/TechCard.tsx
 import { motion } from "motion/react";
 import type { Tech } from "./technologies.data";
 import { cardVariants } from "./TechCategory";

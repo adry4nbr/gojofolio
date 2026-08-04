@@ -1,5 +1,4 @@
 /* eslint-disable react-refresh/only-export-components */
-// sections/Technologies/TechCategory.tsx
 import { motion } from "motion/react";
 import type { Variants } from "motion/react";
 import type { TechCategoryData } from "./technologies.data";
@@ -9,7 +8,7 @@ const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
-      delayChildren: 2.5, // após a colisão terminar — mesmo número do TRAVEL_DURATION + EXPLOSION_DURATION
+      delayChildren: 2.5,
       staggerChildren: 0.4,
     },
   },
