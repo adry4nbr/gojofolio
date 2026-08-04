@@ -5,10 +5,17 @@ const stats = [
   { value: "1+", label: "Ano de Experiência Prática" },
   { value: "5+", label: "Projetos Concluídos" },
   { value: "26+", label: "Tecnologias" },
-  { value: "7+", label: "Cursos de Tecnologia" },
+  { value: "8+", label: "Cursos de Tecnologia" },
 ];
 
 export function AboutMeInfo() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="flex flex-col size-full justify-center px-16 gap-6">
       <div className="flex flex-col gap-4">
@@ -38,7 +45,11 @@ export function AboutMeInfo() {
         ))}
       </div>
 
-      <Button className="w-fit" variant="filled">
+      <Button
+        onClick={() => scrollToSection("Contact")}
+        className="w-fit"
+        variant="filled"
+      >
         Entrar em Contato
       </Button>
     </div>

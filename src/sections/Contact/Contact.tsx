@@ -5,7 +5,7 @@ import { SocialLinks } from "./SocialLinks";
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.3, delayChildren: 0.1 },
+    transition: { staggerChildren: 0.3, delayChildren: 0.3 },
   },
 };
 
@@ -19,8 +19,18 @@ const itemVariants = {
 };
 
 export function Contact() {
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    //OBS: Sempre o nome do arquivo aqui
+    link.href = "contact/Adryan_Galdino_Curriculo_v7.pdf";
+    link.download = "Adryan_Galdino_Curriculo_v7.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <section className="relative flex flex-col h-screen mt-14">
+    <section id="Contact" className="relative flex flex-col h-screen mt-14">
       <div
         aria-hidden="true"
         className="absolute w-80 h-80 top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none -z-10"
@@ -48,14 +58,16 @@ export function Contact() {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <Button variant="filled">Baixar Currículo</Button>
+          <Button onClick={handleDownloadCV} variant="filled">
+            Baixar Currículo
+          </Button>
         </motion.div>
         <motion.div
           variants={itemVariants}
           className="w-[18%] h-1 bg-linear-to-r from-accent-blue via-accent-red to-accent-blue mt-18"
         />
       </motion.div>
-      <footer className="flex bg-foreground text-background h-20 w-full mt-auto justify-center items-center">
+      <footer className="flex bg-black text-white h-20 w-full mt-auto justify-center items-center">
         © 2026 - Desenvolvido por Adryan Galdino Soares - Tema inspirado em
         Satoru Gojo da Obra Jujutsu Kaisen
       </footer>

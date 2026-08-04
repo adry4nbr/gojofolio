@@ -20,6 +20,13 @@ const itemVariants = {
 };
 
 export function Hero() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <motion.section
       initial="hidden"
@@ -49,8 +56,12 @@ export function Hero() {
       </motion.p>
 
       <motion.div variants={itemVariants} className="flex gap-5 mb-24">
-        <Button variant="filled"> Ver Projetos </Button>
-        <Button variant="outline"> Contato </Button>
+        <Button onClick={() => scrollToSection("Projects")} variant="filled">
+          Ver Projetos
+        </Button>
+        <Button onClick={() => scrollToSection("Contact")} variant="outline">
+          Contato
+        </Button>
       </motion.div>
 
       <motion.div variants={itemVariants}>
