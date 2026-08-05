@@ -17,39 +17,38 @@ export function AboutMeInfo() {
   };
 
   return (
-    <div className="flex flex-col size-full justify-center px-16 gap-6">
-      <div className="flex flex-col gap-4">
-        <p className="text-xl font-medium text-foreground">
-          Sou um desenvolvedor front-end em formação, apaixonado por criar
-          interfaces criativas e inclusivas que fazem diferença para pessoas
-          reais. Com essa mentalidade ganhei o Hackathon da Uninassau em
-          primeiro lugar.
+    // Reduzido o px no mobile
+    <div className="flex flex-col size-full justify-center px-6 md:px-16 gap-8 md:gap-6 mt-8 md:mt-0">
+      {/* Adicionado text-center no mobile */}
+      <div className="flex flex-col gap-4 text-left ">
+        <p className="text-sm md:text-xl font-medium text-foreground">
+          Sou um desenvolvedor front-end em formação, com foco no ecossistema
+          React/Next.js, construo desde componentes responsivos até aplicações
+          completas.
         </p>
-        <p className="text-xl font-medium text-foreground">
-          Com foco no ecossistema React/Next.js, construo desde componentes
-          responsivos até aplicações completas. Também possuo experiência
-          prática integrando APIs REST e gerenciando bancos de dados com
-          Supabase e Java.
+        <p className="text-sm md:text-xl font-medium text-foreground">
+          Também possuo experiência prática integrando APIs REST e gerenciando
+          bancos de dados com Supabase e Java. E fiquei em 1° lugar no Hackathon
+          da Uninassau.
         </p>
       </div>
-      {/* Linha separadora */}
-      <div className="relative w-[95%] h-px bg-linear-to-r from-accent-red to-accent-blue">
-        <span className="absolute -right-8 leading-none top-1/2 -translate-y-1/2 text-accent-red text-lg">
+
+      {/* Linha separadora: escondida no mobile com hidden md:block */}
+      <div className="relative w-[95%] h-px bg-linear-to-r from-accent-red to-accent-blue block">
+        <span className="absolute -right-6 md:-right-8 leading-none top-1/2 -translate-y-1/2 text-accent-red text-sm md:text-lg">
           ◆
         </span>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      {/* Grid das stats: gap reduzido no mobile */}
+      <div className="grid grid-cols-2 gap-3 md:gap-4">
         {stats.map((stat) => (
           <StatCard key={stat.label} value={stat.value} label={stat.label} />
         ))}
       </div>
 
-      <Button
-        onClick={() => scrollToSection("Contact")}
-        className="w-fit"
-        variant="filled"
-      >
+      {/* Botão: largura total no mobile e centralizado (mx-auto) */}
+      <Button onClick={() => scrollToSection("Contact")} variant="filled">
         Entrar em Contato
       </Button>
     </div>

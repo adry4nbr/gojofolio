@@ -45,17 +45,26 @@ export function Hero() {
         <SixEyesIcon />
       </motion.div>
 
-      <motion.h1 variants={itemVariants} className="text-9xl my-6 z-1">
+      <motion.h1
+        variants={itemVariants}
+        className="text-6xl md:text-9xl my-4 md:my-6 z-1 text-center"
+      >
         Portfolio
       </motion.h1>
+
       <motion.p
         variants={itemVariants}
-        className="text-4xl mb-8 z-1 font-light"
+        // Adicionamos text-center e px-4 para o texto não colar nas bordas do celular
+        className="text-lg md:text-4xl mb-10 md:mb-8 z-1 font-light text-center px-4"
       >
         Adryan | Desenvolvedor Front-End | O Mais Honrado
       </motion.p>
 
-      <motion.div variants={itemVariants} className="flex gap-5 mb-24">
+      <motion.div
+        variants={itemVariants}
+        // flex-col no mobile, md:flex-row no desktop. Controlamos a largura para não colar nas bordas.
+        className="flex flex-row gap-4 md:gap-5 mb-16 md:mb-24 w-[85%] md:w-auto pl-2 md:pl-0 md:pr-8"
+      >
         <Button onClick={() => scrollToSection("Projects")} variant="filled">
           Ver Projetos
         </Button>

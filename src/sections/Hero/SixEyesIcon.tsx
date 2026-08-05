@@ -31,8 +31,9 @@ export function SixEyesIcon() {
         style={{ background: "var(--six-eyes-gradient)" }}
         className={
           hasAwakened
-            ? "p-5 rounded-full mb-8 cursor-default"
-            : "p-5 rounded-full mb-8 cursor-pointer"
+            ? // Protegemos o p-5 e mb-8 com md:
+              "p-4 md:p-5 rounded-full mb-6 md:mb-8 cursor-default"
+            : "p-4 md:p-5 rounded-full mb-6 md:mb-8 cursor-pointer"
         }
         aria-label={hasAwakened ? "Olho aberto" : "Olho fechado"}
         animate={{
@@ -43,7 +44,8 @@ export function SixEyesIcon() {
         }}
         transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
       >
-        <Icon className="text-white" size={60} />
+        {/* Substituímos size={60} por classes Tailwind para funcionar no md: */}
+        <Icon className="text-white w-10 h-10 md:w-15 md:h-15" />
       </motion.button>
     </div>
   );

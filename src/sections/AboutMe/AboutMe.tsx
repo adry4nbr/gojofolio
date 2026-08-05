@@ -1,6 +1,6 @@
 import { AboutMeInfo } from "./AboutMeInfo";
 import { AboutMeEnergyBallReveal } from "./AboutMeEnergyBallReveal";
-import { ProfilePhoto } from "./AboutMePhoto";
+import { AboutMePhoto } from "./AboutMePhoto";
 
 export function AboutMe() {
   return (
@@ -9,12 +9,16 @@ export function AboutMe() {
       className="relative flex flex-col my-10 pb-12 overflow-hidden"
     >
       <AboutMeEnergyBallReveal />
-      <div className="ml-7">
+
+      {/* Adicionado margin-top e text-center no mobile. Protegido com md: */}
+      <div className="ml-4 md:ml-7 mt-10 md:mt-0 text-left">
         <p className="my-2 ml-1 text-accent-red">// SOBRE MIM</p>
-        <h2 className="text-7xl">Quem sou eu ?</h2>
+        <h2 className="text-4xl md:text-7xl">Quem sou eu ?</h2>
       </div>
-      <div className="grid grid-cols-2 size-full">
-        <ProfilePhoto />
+
+      {/* Trocado grid nativo por flex-col no mobile, e md:grid para desktop */}
+      <div className="flex flex-col md:grid md:grid-cols-2 size-full mt-10 md:mt-0 gap-10 md:gap-0">
+        <AboutMePhoto />
         <AboutMeInfo />
       </div>
     </section>
