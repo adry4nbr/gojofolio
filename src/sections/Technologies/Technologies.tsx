@@ -14,7 +14,6 @@ export function Technologies() {
         <h2 className="text-4xl md:text-7xl">Tecnologias</h2>
       </div>
 
-      {/* Grid de categorias: 1 coluna no mobile, 2 colunas no desktop */}
       <div className="grid grid-cols-1 md:grid-cols-2">
         {techCategories.map((category) => (
           <TechCategory key={category.title} category={category} />

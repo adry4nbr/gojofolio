@@ -48,7 +48,6 @@ export function TechCategory({ category }: TechCategoryProps) {
       </div>
 
       <motion.div
-        // 2 colunas no mobile, 4 colunas no desktop
         className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-4"
         variants={containerVariants}
         initial="hidden"

@@ -1,5 +1,3 @@
-// sections/Projects/projects.data.ts
-
 export interface Project {
   title: string;
   description: string;

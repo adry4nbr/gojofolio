@@ -17,9 +17,7 @@ export function AboutMeInfo() {
   };
 
   return (
-    // Reduzido o px no mobile
     <div className="flex flex-col size-full justify-center px-6 md:px-16 gap-8 md:gap-6 mt-8 md:mt-0">
-      {/* Adicionado text-center no mobile */}
       <div className="flex flex-col gap-4 text-left ">
         <p className="text-sm md:text-xl font-medium text-foreground">
           Sou um desenvolvedor front-end em formação, com foco no ecossistema
@@ -33,21 +31,18 @@ export function AboutMeInfo() {
         </p>
       </div>
 
-      {/* Linha separadora: escondida no mobile com hidden md:block */}
       <div className="relative w-[95%] h-px bg-linear-to-r from-accent-red to-accent-blue block">
         <span className="absolute -right-6 md:-right-8 leading-none top-1/2 -translate-y-1/2 text-accent-red text-sm md:text-lg">
           ◆
         </span>
       </div>
 
-      {/* Grid das stats: gap reduzido no mobile */}
       <div className="grid grid-cols-2 gap-3 md:gap-4">
         {stats.map((stat) => (
           <StatCard key={stat.label} value={stat.value} label={stat.label} />
         ))}
       </div>
 
-      {/* Botão: largura total no mobile e centralizado (mx-auto) */}
       <Button onClick={() => scrollToSection("Contact")} variant="filled">
         Entrar em Contato
       </Button>

@@ -29,7 +29,6 @@ export function Contact() {
   };
 
   return (
-    // min-h-screen no lugar de h-screen para evitar cortes no mobile
     <section
       id="Contact"
       className="relative flex flex-col min-h-screen mt-14 overflow-hidden"
@@ -40,18 +39,15 @@ export function Contact() {
         style={{ background: "var(--hero-glow)", filter: "blur(120px)" }}
       />
 
-      {/* Margem ajustada para mobile */}
       <p className="my-2 ml-4 md:ml-9 text-pink-500">// Contatos</p>
 
       <motion.div
-        // mx-4 para respiro no mobile, centralizado
         className="flex flex-col mx-4 md:ml-7 items-center text-center"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        {/* Tamanho da fonte responsivo */}
         <motion.h2
           variants={itemVariants}
           className="text-4xl md:text-7xl mt-10 md:mt-14 mb-4 md:mb-6"
@@ -72,14 +68,12 @@ export function Contact() {
           </Button>
         </motion.div>
 
-        {/* Largura da linha adaptada para mobile */}
         <motion.div
           variants={itemVariants}
           className="w-[40%] md:w-[18%] h-1 bg-linear-to-r from-accent-blue via-accent-red to-accent-blue mt-10 md:mt-18"
         />
       </motion.div>
 
-      {/* Footer com padding e texto responsivo */}
       <footer className="flex  bg-black text-white py-6 px-4 md:h-20 w-full mt-auto justify-center items-center text-xs md:text-sm text-center">
         © 2026 - Adryan Galdino - Tema inspirado em Satoru Gojo da Obra Jujutsu
         Kaisen

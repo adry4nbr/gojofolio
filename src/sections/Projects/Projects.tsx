@@ -11,24 +11,19 @@ export function Projects() {
       className="relative flex flex-col overflow-hidden mb-4"
     >
       <ProjectsEnergyBallReveal />
-      {/* Ajuste de margem no mobile */}
       <div className="mx-4 md:mx-7">
         <p className="my-2 ml-1 text-accent-blue">// Meus Projetos</p>
 
-        {/* Tamanho do texto ajustado para caber na tela pequena */}
         <h2 className="text-4xl md:text-7xl">Trabalhos</h2>
 
-        {/* A linha divisória foi aumentada proporcionalmente no mobile */}
         <div className="w-[20%] md:w-[7%] h-1 bg-linear-to-r from-accent-blue to-accent-red mt-4 mb-8" />
 
-        {/* Largura ajustada para 100% no mobile e fonte um pouco menor */}
         <p className="text-base md:text-xl font-stretch-semi-expanded text-foreground w-full md:w-[45%]">
           Confira alguns dos projetos que desenvolvi — Cada um com propósito e
           uma nova habilidade adquirida.
         </p>
 
         <motion.div
-          // {/* Mudança principal: grid-cols-1 no mobile, md:grid-cols-3 no desktop */}
           className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-12"
           variants={gridVariants}
           initial="hidden"

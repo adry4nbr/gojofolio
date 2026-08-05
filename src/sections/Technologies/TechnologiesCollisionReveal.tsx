@@ -12,10 +12,9 @@ export function TechnologiesCollisionReveal() {
   const [phase, setPhase] = useState<Phase>("traveling");
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detecta o tamanho da tela ao carregar e se a janela for redimensionada
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768); // Abaixo de 768px é considerado mobile (breakpoint 'md')
+      setIsMobile(window.innerWidth < 768);
     };
 
     checkScreenSize();
@@ -23,8 +22,6 @@ export function TechnologiesCollisionReveal() {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  // Define os ranges dinamicamente baseados no dispositivo
-  // Ajuste os valores abaixo caso precise refinar o ponto exato da colisão no mobile
   const redRange = isMobile ? ["0vw", "40vw"] : ["0vw", "50vw"];
   const blueRange = isMobile ? ["99vw", "40vw"] : ["99vw", "50vw"];
 
