@@ -160,7 +160,7 @@ Desenvolvido por **Adryan Galdino**.
 - 💼 **LinkedIn**: [Adryan Galdino](https://www.linkedin.com/in/adryan-galdino-262769276/)
 - ✉️ **E-mail**: `adry4nb@gmail.com`
 
----
+---SS
 
 ## 📜 Licença
 
@@ -169,5 +169,5 @@ Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE.txt](L
 ---
 
 <p align="center">
-  <i>"Ao longo dos céus e da terra, a minha criatividade é infinita."</i>
+  <i>"Ao longo do céu e da terra, a minha criatividade é infinita."</i>
 </p>
