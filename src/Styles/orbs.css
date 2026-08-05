@@ -4,7 +4,6 @@
   --orb-purple-glow: #9333ea;
 
   /* Orbs das animações de travessia */
-
   /* RGB "soltos" pra permitir opacidade dinâmica no rgba() */
   --orb-red-glow-rgb: 239, 68, 68;
   --orb-blue-glow-rgb: 59, 130, 246;
@@ -51,7 +50,9 @@
     0 0 90px rgba(var(--orb-blue-glow-rgb), 0.55),
     0 0 180px rgba(var(--orb-blue-glow-rgb), 0.18);
 
-  /* Explosão Roxa */
+  /* 
+  =======================Explosão Roxa=========================== 
+  */
   --explosion-purple-1: #e2caf9;
   --explosion-purple-2: #9b56dc;
   --explosion-purple-3: #a248f6;

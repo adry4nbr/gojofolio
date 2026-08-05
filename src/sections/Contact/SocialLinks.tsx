@@ -37,7 +37,7 @@ export function SocialLinkItem({
       href={href}
       target="_blank"
       rel="noreferrer"
-      className={`group flex items-center justify-center w-16 h-16 rounded-full border-2 transition-transform duration-500 ease-in-out hover:scale-110 ${borderColorClass} ${hoverTextColorClass}`}
+      className={`group flex items-center justify-center size-14 md:size-16 rounded-full border-2 transition-transform duration-500 ease-in-out hover:scale-110 ${borderColorClass} ${hoverTextColorClass}`}
     >
       <span className="inline-flex transition-transform duration-500 ease-in-out group-hover:rotate-360 group-hover:scale-110">
         {icon}
@@ -48,7 +48,10 @@ export function SocialLinkItem({
 
 export function SocialLinks() {
   return (
-    <motion.div variants={containerVariants} className="flex gap-6">
+    <motion.div
+      variants={containerVariants}
+      className="flex flex-wrap justify-center gap-4 md:gap-6"
+    >
       {socialLinks.map((link) => (
         <SocialLinkItem
           key={link.name}

@@ -19,7 +19,7 @@ export function TechCard({ tech, accentColor }: TechCardProps) {
         } as React.CSSProperties
       }
       // Hover de escala aplicado apenas no desktop (md:hover:scale-110) para evitar bugs no toque mobile
-      className="group relative flex flex-col items-center justify-center gap-2 py-4 bg-card rounded-xl border-2 border-(--tech-accent)/30 overflow-hidden transition-all duration-500 md:hover:scale-110 hover:border-(--tech-accent)/60"
+      className="group relative flex flex-col items-center justify-center gap-2 py-4 bg-card rounded-3xl border-2 border-(--tech-accent)/30 overflow-hidden transition-all duration-500 md:hover:scale-110 hover:border-(--tech-accent)/60"
     >
       <Icon size={32} color="default" />
       <span className="text-sm font-medium">{tech.name}</span>
