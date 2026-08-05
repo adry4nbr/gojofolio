@@ -6,7 +6,7 @@ export function AboutMe() {
   return (
     <section
       id="ABoutMe"
-      className="relative flex flex-col my-10 pb-12 overflow-hidden"
+      className="relative flex flex-col md:my-10 pb-12 overflow-hidden"
     >
       <AboutMeEnergyBallReveal />
 

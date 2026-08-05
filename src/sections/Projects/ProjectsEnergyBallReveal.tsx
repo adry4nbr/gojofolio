@@ -21,7 +21,7 @@ export function ProjectsEnergyBallReveal() {
       <div className="absolute inset-0 z-20 flex items-center pointer-events-none">
         <EnergyBall
           color="blue"
-          xRange={["99vw", "-8vw"]}
+          xRange={["99vw", "-115%"]}
           duration={3}
           delay={0.2}
           onAnimationStart={() => setBallStarted(true)}

@@ -1,5 +1,5 @@
 // sections/Technologies/TechnologiesCollisionReveal.tsx
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { EnergyBall } from "../../components/ui/EnergyBall";
 
@@ -10,6 +10,23 @@ type Phase = "traveling" | "exploding" | "done";
 
 export function TechnologiesCollisionReveal() {
   const [phase, setPhase] = useState<Phase>("traveling");
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detecta o tamanho da tela ao carregar e se a janela for redimensionada
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768); // Abaixo de 768px é considerado mobile (breakpoint 'md')
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  // Define os ranges dinamicamente baseados no dispositivo
+  // Ajuste os valores abaixo caso precise refinar o ponto exato da colisão no mobile
+  const redRange = isMobile ? ["0vw", "40vw"] : ["0vw", "50vw"];
+  const blueRange = isMobile ? ["99vw", "40vw"] : ["99vw", "50vw"];
 
   return (
     <div
@@ -30,7 +47,7 @@ export function TechnologiesCollisionReveal() {
           <div className="absolute inset-0 flex items-center ">
             <EnergyBall
               color="red"
-              xRange={["0vw", "50vw"]}
+              xRange={redRange}
               duration={TRAVEL_DURATION}
               onAnimationComplete={() => setPhase("exploding")}
             />
@@ -38,7 +55,7 @@ export function TechnologiesCollisionReveal() {
           <div className="absolute inset-0 flex items-center">
             <EnergyBall
               color="blue"
-              xRange={["99vw", "50vw"]}
+              xRange={blueRange}
               duration={TRAVEL_DURATION}
             />
           </div>

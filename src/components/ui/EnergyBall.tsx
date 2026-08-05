@@ -5,8 +5,8 @@ type BallColor = "red" | "blue";
 interface EnergyBallProps {
   color: BallColor;
   size?: number;
-  xRange?: [string, string]; // [posição inicial, posição final]
-  duration?: number; // duração da travessia (whileInView)
+  xRange?: string[];
+  duration?: number;
   delay?: number;
   onAnimationComplete?: () => void;
   onAnimationStart?: () => void;
