@@ -23,11 +23,11 @@ Este projeto foi construído para apresentar meus projetos, habilidades técnica
 
 ## 🚀 Deploy
 
-> 📌 **Status do Deploy**: _Pronto para inserção da URL oficial._
+> 📌 **Status do Deploy**: _Online_
 
 ### 🔗 Link Oficial
 
-- **Aplicação Online (Live)**: `[COLOQUE_SEU_LINK_AQUI]` _(exemplo: https://portfolio-gojo.vercel.app)_
+- **Aplicação Online (Live)**: [https://gojofolio.vercel.app/](https://gojofolio.vercel.app/)
 
 ---
 
