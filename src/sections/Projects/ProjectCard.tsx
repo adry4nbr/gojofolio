@@ -13,18 +13,30 @@ interface ProjectCardProps {
   project: Project;
   variants: Variants;
   custom: number;
+  isActive: boolean;
+  onToggle: () => void;
 }
 
-export function ProjectCard({ project, variants, custom }: ProjectCardProps) {
+export function ProjectCard({
+  project,
+  variants,
+  custom,
+  isActive,
+  onToggle,
+}: ProjectCardProps) {
   const { title, description, techs, image, repoUrl, deployUrl } = project;
 
   return (
     <motion.div
       variants={variants}
       custom={custom}
+      onClick={(e) => {
+        e.stopPropagation();
+        onToggle();
+      }}
       className="group flex flex-col rounded-2xl overflow-hidden bg-background border-2 border-border transition-transform duration-900 ease-out md:hover:-translate-y-4"
     >
-      {/* Imagem + overlay de hover */}
+      {/* Imagem + overlay de hover/toque */}
       <div className="relative overflow-hidden md:group-hover:scale-105 transition-all duration-700">
         <img
           src={image}
@@ -32,7 +44,9 @@ export function ProjectCard({ project, variants, custom }: ProjectCardProps) {
           className="w-full h-60 md:h-72 object-cover"
         />
         <div
-          className="absolute inset-0 flex items-center justify-center gap-4 md:gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className={`absolute inset-0 flex items-center justify-center gap-4 md:gap-6 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${
+            isActive ? "opacity-100" : "opacity-0"
+          }`}
           style={{ background: "var(--project-overlay-gradient)" }}
         >
           <a
@@ -40,6 +54,7 @@ export function ProjectCard({ project, variants, custom }: ProjectCardProps) {
             target="_blank"
             rel="noreferrer"
             aria-label={`Deploy do projeto ${title}`}
+            onClick={(e) => e.stopPropagation()}
             className="flex items-center justify-center size-10 md:size-12 rounded-full bg-accent-blue text-background hover:scale-110 md:hover:scale-120 transition-transform duration-300"
           >
             <ExternalLink size={20} />
@@ -49,6 +64,7 @@ export function ProjectCard({ project, variants, custom }: ProjectCardProps) {
             target="_blank"
             rel="noreferrer"
             aria-label={`Repositório do projeto ${title}`}
+            onClick={(e) => e.stopPropagation()}
             className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full text-background bg-foreground hover:scale-110 md:hover:scale-120 transition-transform duration-300"
           >
             <SiGithub size={20} />

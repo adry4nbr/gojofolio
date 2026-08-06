@@ -20,7 +20,7 @@ export function AboutMeEnergyBallReveal() {
       <div className="absolute inset-0 z-20 flex items-center pointer-events-none">
         <EnergyBall
           color="red"
-          xRange={["0vw", "100vw"]}
+          xRange={["0vw", "105vw"]}
           duration={3}
           delay={0.3}
           onAnimationStart={() => setBallStarted(true)}

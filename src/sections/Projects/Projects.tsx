@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from "react";
 import { motion } from "motion/react";
 import { ProjectsEnergyBallReveal } from "./ProjectsEnergyBallReveal";
 import { cardVariants, gridVariants } from "./projects.animations";
@@ -5,6 +6,20 @@ import { projects } from "./projects.data";
 import { ProjectCard } from "./ProjectCard";
 
 export function Projects() {
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent | TouchEvent) {
+      if (gridRef.current && !gridRef.current.contains(e.target as Node)) {
+        setActiveId(null);
+      }
+    }
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
   return (
     <section
       id="Projects"
@@ -24,6 +39,7 @@ export function Projects() {
         </p>
 
         <motion.div
+          ref={gridRef}
           className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-12"
           variants={gridVariants}
           initial="hidden"
@@ -36,6 +52,12 @@ export function Projects() {
               project={project}
               variants={cardVariants}
               custom={index % 3}
+              isActive={activeId === project.title}
+              onToggle={() =>
+                setActiveId((prev) =>
+                  prev === project.title ? null : project.title,
+                )
+              }
             />
           ))}
         </motion.div>
