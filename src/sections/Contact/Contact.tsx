@@ -21,8 +21,8 @@ const itemVariants = {
 export function Contact() {
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "contact/Adryan_Galdino_Curriculo_v7.pdf";
-    link.download = "Adryan_Galdino_Curriculo_v7.pdf";
+    link.href = "contact/Adryan_Galdino_Curriculo_v8.pdf";
+    link.download = "Adryan_Galdino_Curriculo_v8.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
