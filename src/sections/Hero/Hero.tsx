@@ -56,7 +56,7 @@ export function Hero() {
         variants={itemVariants}
         className="text-lg md:text-4xl mb-10 md:mb-8 z-1 font-light text-center px-4"
       >
-        Adryan | Desenvolvedor Front-End | O Mais Honrado
+        Adryan | Desenvolvedor Full-Stack | O Mais Honrado
       </motion.p>
 
       <motion.div
