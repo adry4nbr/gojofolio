@@ -25,9 +25,8 @@ export function AboutMeInfo() {
           completas.
         </p>
         <p className="text-sm md:text-xl font-medium text-foreground">
-          No ecossistema Js/Ts e Node utilizo React/Next.js no Front-end e
-          NestJS/Prisma no Back-end. E fiquei em 1° lugar no Hackathon da
-          Uninassau.
+          Nesse ecossistema utilizo React/Next.js no Front-end e NestJS/Prisma
+          no Back-end. E fiquei em 1° lugar no Hackathon da Uninassau.
         </p>
       </div>
 
