@@ -9,6 +9,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Auth Benchmark",
+    description:
+      "Uma aplicação para benchmarkar com 3 Back-ends de linguagens diferentes e um unico Front-end, comparando desempenho e segurança.",
+    techs: ["Nest.js", "Spring Boot", "Angular"],
+    image: "/projects/Auth.png",
+    repoUrl: "https://github.com/adry4nbr/Auth-benchmark",
+    deployUrl: "https://auth-benchmark.vercel.app",
+  },
+  {
     title: "Planejai",
     description:
       "Educador Financeiro Inteligente desenvolvido com React 19 + TypeScript + Google Gemini API.",
